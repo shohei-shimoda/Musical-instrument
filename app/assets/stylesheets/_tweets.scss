@@ -65,13 +65,15 @@
   &__violin {
     margin-bottom: 15px;
   }
-
 }
+
+
 .center {
   width: 100%;
   background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
   overflow: scroll;
   clear:none;
+  margin-bottom: 40px;
   padding: 10px 20px
 }
 .posts {
@@ -89,6 +91,34 @@
     margin-bottom: 30px;
   }
 }
+.contents {
+  border: 4mm ridge goldenrod;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+  
+  &__name {
+    font-size: 25px;
+  }
+}
+.post {
+  display: flex;
+  margin-bottom: 30px;
+  &__image {
+    height: 400px;
+    width: 60%;
+    background-size: cover;
+  }
+  &__text {
+    border: double 4px rgba(15, 3, 14, 0.6);
+    width: 50%;
+    height: 309.38px;
+  }
+}
+.pagination {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
 
 .right {
   width: 250px;
@@ -119,6 +149,12 @@
   }
 }
 
+
+
+
+
+
+
 .footer {
   background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aj8EjMBz4AO_y4qMfbRYjKFs6Y6WrwZaaS0EHawgvXlVNkbR&s);
   width: 100%;
@@ -133,4 +169,11 @@
 }
 .fa-twitter {
   color: rgb(11, 185, 238);
+}
+
+
+
+// ここからnewのTHML
+.contents_row {
+  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
 }

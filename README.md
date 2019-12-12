@@ -1,6 +1,7 @@
-messageテーブル
+tweetsテーブル
 ・name
 ・body
+.image
 
 groupテーブル
 ・image

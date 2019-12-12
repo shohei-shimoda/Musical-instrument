@@ -1,13 +1,30 @@
-<div class="contents row">
-  <div class="container">
-    <%= form_with(model: @tweet, local: true) do |form| %>
-      <h3>
-       
-      </h3>
-      <%= form.text_field :name, placeholder: "Nickname" %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "text" , rows: "10" %>
-      <%= form.submit "SEND" %>
-    <% end %>
+<header class="header">
+  <div class="titles">
+  <h1 class="titles__title">My precious instrument</h1>
+  </div>
+</header>
+<div class="middle">
+  <div class="center">
+    <link rel="stylesheet" href="./tweets.scss">
+    <div class="container">
+      <%= form_with(model: @tweet, local: true) do |form| %>
+        <h3>
+          投稿する
+        </h3>
+        <%= form.text_field :name, placeholder: "Nickname" %>
+        <%# <%= form.text_field :image, placeholder: "Image Url" %> 
+        <%= form.file_field :video, placeholder: "Video Url" %>
+        <%= form.text_area :text, placeholder: "text" ,cols:"30", rows: "10" , class:"comment" %>
+        <%= form.submit "SEND"%>
+      <% end %>
+    </div>
   </div>
 </div>
+<footer class="footer">
+  <div class="footer__twitter">   
+    サイト開発者のツイッターはこちら→  
+    <%= link_to("https://twitter.com/xJZzcNB6FjzeQ9m") do %>
+      <i class="fab fa-twitter"></i>            
+      <% end %>
+  </div>  
+</footer>
