@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
 
+  before_action :move_to_index, except: [:index, :show, :piano, :guitar, :bass, :violin, :others]
+
   def index
     @tweets = Tweet.all.order("created_at DESC").page(params[:page]).per(5)
   end
@@ -11,6 +13,9 @@ class TweetsController < ApplicationController
   def create
     Tweet.create(tweet_params) 
     redirect_to root_path, notice: 'グループを作成しました'  #create画面に飛ばず、直接rootに戻るコード
+  end
+
+  def show
   end
 
   def piano
@@ -36,7 +41,11 @@ class TweetsController < ApplicationController
 
     private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text, :video, :instrument_ids)
+    params.require(:tweet).permit(:name, :image, :text, :video, :instrument_ids).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end
