@@ -53,12 +53,17 @@
             <%= paginate(@tweets) %> 
         </ul>
         <ul class="right">
-          <p class="right__log-in">
-            <%= link_to 'ログイン', '#' %>
-          </p>
-          <p class="right__log-out">
-            <%= link_to 'ログアウト', '#' %>
-          </p>
+      　<% if user_signed_in? %>
+          <div class="right__log-out">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+
+          </div>
+        <% else %>
+          <div class="right__log-in">
+            <%= link_to "ログイン", new_user_session_path %>
+            <%= link_to "新規登録", new_user_registration_path %>
+          </div>
+        <% end %>
           <p class="right__post">
             <%= link_to '投稿', new_tweet_path %>
           </p>

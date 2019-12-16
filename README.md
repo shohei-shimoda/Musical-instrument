@@ -4,3 +4,7 @@
 .video
 .instrument_ids
 
+# usersテーブル
+.email
+.encypted_password
+.nickname
