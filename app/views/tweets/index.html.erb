@@ -8,24 +8,28 @@
   <body>
       <header class="header">
         <div class="titles">
-          <h1 class="titles__title">My precious instrument</h1>
+          <h1 class="titles__title">My precious instruments</h1>
         </div>
       </header>
       <div class="middle">
         <ul class="left">
-          <ul class="left__list">〜Instrument list〜</ul>
+          <ul class="left__list">〜Instruments list〜</ul>
           <li class="left__piano">
-            <%= link_to '・ピアノ', '#' %>
+            <%= link_to '・ピアノ', piano_tweets_path %>
           </li>
           <li class="left__guitar">
-            <%= link_to '・ギター', '#' %>
+            <%= link_to '・ギター', guitar_tweets_path %>
           </li>
           <li class="left__bass">
-            <%= link_to '・ベース', '#' %>
+            <%= link_to '・ベース', bass_tweets_path %>
           </li>
           <li class="left__violin">
-            <%= link_to '・バイオリン', '#' %>   
-          </li>      
+            <%= link_to '・バイオリン', violin_tweets_path %>
+          </li>   
+          <li class="left__others">
+            <%= link_to '・その他', others_tweets_path %>   
+          </li>    
+                
         </ul>
         <ul class="center">
           <ul class="posts"></ul>
@@ -34,12 +38,13 @@
                   <% @tweets.each do |tweet| %>
                   <span class="contents__name">
                   <%= tweet.name %>
+                  <%= tweet.instrument_ids %>
                     <div class="post">
                       <div class="post__image">
                       <%# <div class="post__image" style="background-image: url(<%= tweet.image %>
                       <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
                       </div>
-                      <div class="post__text"><%= tweet.text %></div>  
+                      <div class="post__text"><%= simple_format(tweet.text) %></div>  
                     </div>                                                     
                   </span>
                   <% end %>

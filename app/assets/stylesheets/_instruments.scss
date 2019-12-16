@@ -1,0 +1,143 @@
+.html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.pianotitles {
+  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aj8EjMBz4AO_y4qMfbRYjKFs6Y6WrwZaaS0EHawgvXlVNkbR&s);
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  list-style: none;
+  &__title {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 45px;
+  font-family: 'Dancing Script', cursive;
+  }
+}
+
+
+
+.pianoleft {
+  float: left;
+  width: 250px;
+  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
+  color: rgb(230, 20, 20);  
+  padding: 20px 15px;
+  overflow: scroll;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+
+.pianocenter {
+  width: 100%;
+  // background-image : url(http://pre15.deviantart.net/a485/th/pre/f/2007/091/d/e/piano_by_thegenome.jpg);
+  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-size: cover;
+  overflow: scroll;
+  clear:none;
+  margin-bottom: 40px;
+  padding: 10px 20px
+}
+.guitarcenter {
+  width: 100%;
+  // background-image : url(https://www.silhouette-illust.com/wp-content/uploads/2017/10/gakki_guitar_41403-300x300.jpg);
+  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-size: cover;
+  overflow: scroll;
+  clear:none;
+  margin-bottom: 40px;
+  padding: 10px 20px
+}
+.basscenter {
+  width: 100%;
+  // background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK6oRf8BlN0zRqDRERjBOShLFA3WBIShquBk7W7uMAVrAlmYcw&s);
+  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-size: cover;
+  overflow: scroll;
+  clear:none;
+  margin-bottom: 40px;
+  padding: 10px 20px
+}
+.violincenter {
+  width: 100%;
+  // background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1P128yyob07dW6xIZ98CJ3vnHMANJvxaEOrWRPN5fsBM256n9&s);
+  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-size: cover;
+  overflow: scroll;
+  clear:none;
+  margin-bottom: 40px;
+  padding: 10px 20px
+}
+.otherscenter {
+  width: 100%;
+  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-size: cover;
+  overflow: scroll;
+  clear:none;
+  margin-bottom: 40px;
+  padding: 10px 20px
+}
+
+
+.pianoright {
+  width: 250px;
+  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
+  padding: 20px 15px;
+  color: goldenrod; 
+  &__post{
+    margin-top: 252%;
+    text-align: center;
+    border: solid 4px goldenrod;
+    line-height: 100px;
+    font-weight: bold;
+  }
+}
+
+
+.pianofooter {
+  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aj8EjMBz4AO_y4qMfbRYjKFs6Y6WrwZaaS0EHawgvXlVNkbR&s);
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  bottom: 0;
+  position: fixed;
+  padding: 5px 30px;
+  &__twitter {
+    color: white;
+  }
+}
+.fa-twitter {
+  color: rgb(11, 185, 238);
+}
+
+
+
+
+@keyframes snowing {
+  0% {
+      background-position: 0% 0px;
+  }
+  50% {
+      background-position: 5% 40px;
+  }
+  100% {
+      background-position: 0% 80px;
+  }
+}

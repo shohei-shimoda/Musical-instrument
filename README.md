@@ -1,8 +1,6 @@
-tweetsテーブル
+# tweetsテーブル
 ・name
 ・body
-.image
+.video
+.instrument_ids
 
-groupテーブル
-・image
-・name

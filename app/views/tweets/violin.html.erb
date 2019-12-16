@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="titles">
+  <h1 class="titles__title"></h1>
+  </div>
+  
+</header>
+   <body>
+      <header class="header">
+        <div class="pianotitles">
+          <h1 class="pianotitles__title">My precious instruments</h1>
+        </div>
+      </header>
+      <div class="middle">
+        <ul class="pianoleft">
+          <ul class="left__list">〜Instruments list〜</ul>
+          <li class="left__piano">
+            <%= link_to '・ピアノ', piano_tweets_path %>
+          </li>
+          <li class="left__guitar">
+            <%= link_to '・ギター', guitar_tweets_path %>
+          </li>
+          <li class="left__bass">
+            <%= link_to '・ベース', bass_tweets_path %>
+          </li>
+          <li class="left__violin">
+            <%= link_to '・バイオリン', violin_tweets_path %>
+          </li>   
+          <li class="left__others">
+            <%= link_to '・その他', others_tweets_path %>   
+          </li>    
+                
+        </ul>
+        <ul class="violincenter">
+          <ul class="posts"></ul>
+            <ul class="posts__title">Violin Post</ul>
+              <div class="contents">              
+                  <% @tweets.each do |tweet| %>
+                  <span class="contents__name">
+                  <%= tweet.name %>
+                  <%= tweet.instrument_ids %>
+                    <div class="post">
+                      <div class="post__image">
+                      <%# <div class="post__image" style="background-image: url(<%= tweet.image %>
+                      <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+                      </div>
+                      <div class="post__text"><%= simple_format(tweet.text) %></div>  
+                    </div>                                                     
+                  </span>
+                  <% end %>
+                 
+              </div>    
+            <%= paginate(@tweets) %> 
+        </ul>
+        <ul class="pianoright">
+          <a class="btn" href="/tweets">投稿一覧へ戻る</a>
+          <p class="pianoright__post">
+            <%= link_to '投稿', new_tweet_path %>
+          </p>
+        </ul>
+      </div>
+      <footer class="pianofooter">
+        <div class="pianofooter__twitter">   
+          サイト開発者のツイッターはこちら→  
+          <%= link_to("https://twitter.com/xJZzcNB6FjzeQ9m") do %>
+           <i class="fab fa-twitter"></i>            
+           <% end %>
+        </div>  
+      </footer>
+  </body>
+</html>
+
+ 
