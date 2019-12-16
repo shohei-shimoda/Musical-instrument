@@ -13,6 +13,7 @@
         </h3>
         <%= form.text_field :name, placeholder: "Nickname" %>
         <%# <%= form.text_field :image, placeholder: "Image Url" %> 
+        <%= form.select :instrument_ids, [ ["ピアノ",1], ["ギター", 2], ["ベース", 3 ] ,["バイオリン", 4] ,["その他", 5]], prompt: "楽器を選択してください" %>
         <%= form.file_field :video, placeholder: "Video Url" %>
         <%= form.text_area :text, placeholder: "text" ,cols:"30", rows: "10" , class:"comment" %>
         <%= form.submit "SEND"%>
