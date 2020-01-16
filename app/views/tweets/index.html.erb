@@ -6,31 +6,11 @@
     <link rel="stylesheet" href="./tweets.scss">
   </head>
   <body>
-      <header class="header">
-        <div class="titles">
-          <h1 class="titles__title">My precious instruments</h1>
-        </div>
-      </header>
+
+      <%= render partial: "header" %>
+
       <div class="middle">
-        <ul class="left">
-          <ul class="left__list">〜Instruments list〜</ul>
-          <li class="left__piano">
-            <%= link_to '・ピアノ', piano_tweets_path %>
-          </li>
-          <li class="left__guitar">
-            <%= link_to '・ギター', guitar_tweets_path %>
-          </li>
-          <li class="left__bass">
-            <%= link_to '・ベース', bass_tweets_path %>
-          </li>
-          <li class="left__violin">
-            <%= link_to '・バイオリン', violin_tweets_path %>
-          </li>   
-          <li class="left__others">
-            <%= link_to '・その他', others_tweets_path %>   
-          </li>    
-                
-        </ul>
+        <%= render partial: "mainleft" %>
         <ul class="center">
           <ul class="posts"></ul>
             <ul class="posts__title">New Post</ul>
@@ -47,36 +27,28 @@
                       <div class="post__text"><%= simple_format(tweet.text) %></div>  
                     </div>                                                     
                   </span>
-                  <% end %>
-                 
+                  <% end %>               
               </div>    
             <%= paginate(@tweets) %> 
         </ul>
         <ul class="right">
       　<% if user_signed_in? %>
           <div class="right__log-out">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "underlinenone" %>
 
           </div>
         <% else %>
           <div class="right__log-in">
-            <%= link_to "ログイン", new_user_session_path %>
-            <%= link_to "新規登録", new_user_registration_path %>
+            <%= link_to "ログイン", new_user_session_path, class: "underlinenone" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "underlinenone" %>
           </div>
         <% end %>
           <p class="right__post">
-            <%= link_to '投稿', new_tweet_path %>
+            <%= link_to '投稿', new_tweet_path, class: "underlinenone" %>
           </p>
         </ul>
       </div>
-      <footer class="footer">
-        <div class="footer__twitter">   
-          サイト開発者のツイッターはこちら→  
-          <%= link_to("https://twitter.com/shimo_engineers") do %>
-           <i class="fab fa-twitter"></i>            
-           <% end %>
-        </div>  
-      </footer>
+      <%= render partial: "footer" %>
   </body>
 </html>
 

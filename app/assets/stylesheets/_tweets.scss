@@ -16,7 +16,7 @@
   z-index: 1;
 }
 .titles {
-  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aj8EjMBz4AO_y4qMfbRYjKFs6Y6WrwZaaS0EHawgvXlVNkbR&s);
+  background-image : url(https://pixabay.com/get/57e8d3444c53aa14f6da8c7dda79367c143edee352556c48702872d59249cd5bb1_640.jpg);
   font-weight: bold;
   height: 100px;
   line-height: 100px;
@@ -27,6 +27,7 @@
   font-weight: bolder;
   font-size: 45px;
   font-family: 'Dancing Script', cursive;
+  text-decoration: none;
   }
 }
 
@@ -43,7 +44,7 @@
 .left {
   float: left;
   width: 250px;
-  background-image : url(https://azukichi.net/img/music/music-back003.jpg);
+  background-image : url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   color: rgb(230, 20, 20);  
   padding: 20px 15px;
   overflow: scroll;
@@ -56,6 +57,7 @@
   }
   &__piano {
     margin-bottom: 15px;
+    text-decoration: none;
   }
   &__guitar {
     margin-bottom: 15px;
@@ -71,7 +73,7 @@
 
 .center {
   width: 100%;
-  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
+  background-image : url(https://pixabay.com/get/57e9dc434b53ad14f6da8c7dda79367c143edee352556c48702872d59249cd5bb1_640.jpg);
   overflow: scroll;
   clear:none;
   margin-bottom: 40px;
@@ -123,7 +125,7 @@
 
 .right {
   width: 250px;
-  background-image : url(https://azukichi.net/img/music/music-back003.jpg); 
+  background-image : url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9); 
   padding: 20px 15px;
   color: goldenrod; 
   &__log-in {
@@ -145,8 +147,13 @@
     margin-top: 200%;
     text-align: center;
     border: solid 4px goldenrod;
-    line-height: 100px;
     font-weight: bold;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    line-height: 160px;
   }
 }
 
@@ -157,7 +164,7 @@
 
 
 .footer {
-  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aj8EjMBz4AO_y4qMfbRYjKFs6Y6WrwZaaS0EHawgvXlVNkbR&s);
+  background-image : url(https://pixabay.com/get/54e6dc464f54a514f6da8c7dda79367c143edee352556c48702872d59249cd5bb1_640.jpg);
   width: 100%;
   height: 30px;
   z-index: 1;
@@ -174,3 +181,9 @@
 
 
 
+// ここから下は色々装飾したもの
+
+.underlinenone {
+  text-decoration: none;
+  color: rgb(230, 20, 20); 
+}

@@ -36,7 +36,7 @@
 .pianoleft {
   float: left;
   width: 250px;
-  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
+  background-image : url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   color: rgb(230, 20, 20);  
   padding: 20px 15px;
   overflow: scroll;
@@ -48,7 +48,7 @@
 .pianocenter {
   width: 100%;
   // background-image : url(http://pre15.deviantart.net/a485/th/pre/f/2007/091/d/e/piano_by_thegenome.jpg);
-  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-image : url(https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   background-size: cover;
   overflow: scroll;
   clear:none;
@@ -58,7 +58,7 @@
 .guitarcenter {
   width: 100%;
   // background-image : url(https://www.silhouette-illust.com/wp-content/uploads/2017/10/gakki_guitar_41403-300x300.jpg);
-  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-image : url(https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   background-size: cover;
   overflow: scroll;
   clear:none;
@@ -68,7 +68,7 @@
 .basscenter {
   width: 100%;
   // background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK6oRf8BlN0zRqDRERjBOShLFA3WBIShquBk7W7uMAVrAlmYcw&s);
-  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-image : url(https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   background-size: cover;
   overflow: scroll;
   clear:none;
@@ -78,7 +78,7 @@
 .violincenter {
   width: 100%;
   // background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1P128yyob07dW6xIZ98CJ3vnHMANJvxaEOrWRPN5fsBM256n9&s);
-  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-image : url(https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   background-size: cover;
   overflow: scroll;
   clear:none;
@@ -87,7 +87,7 @@
 }
 .otherscenter {
   width: 100%;
-  background-image : url(https://d1f5hsy4d47upe.cloudfront.net/68/68d18750f40e628d0a2ee0f6610ec988_t.jpeg);
+  background-image : url(https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   background-size: cover;
   overflow: scroll;
   clear:none;
@@ -98,7 +98,7 @@
 
 .pianoright {
   width: 250px;
-  background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-GMyDkDi97nXtEiugTixoWkOZqjm1VaAp3aVbcBb1pKnSkC2&s);
+  background-image : url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
   padding: 20px 15px;
   color: goldenrod; 
   &__post{
@@ -125,6 +125,10 @@
 }
 .fa-twitter {
   color: rgb(11, 185, 238);
+}
+.saito {
+  color: rgb(11, 185, 238);
+  text-decoration: none;
 }
 
 

@@ -5,31 +5,9 @@
   
 </header>
    <body>
-      <header class="header">
-        <div class="pianotitles">
-          <h1 class="pianotitles__title">My precious instruments</h1>
-        </div>
-      </header>
+      <%= render partial: "header" %>
       <div class="middle">
-        <ul class="pianoleft">
-          <ul class="left__list">〜Instruments list〜</ul>
-          <li class="left__piano">
-            <%= link_to '・ピアノ', piano_tweets_path %>
-          </li>
-          <li class="left__guitar">
-            <%= link_to '・ギター', guitar_tweets_path %>
-          </li>
-          <li class="left__bass">
-            <%= link_to '・ベース', bass_tweets_path %>
-          </li>
-          <li class="left__violin">
-            <%= link_to '・バイオリン', violin_tweets_path %>
-          </li>   
-          <li class="left__others">
-            <%= link_to '・その他', others_tweets_path %>   
-          </li>    
-                
-        </ul>
+        <%= render partial: "selectleft" %>
         <ul class="violincenter">
           <ul class="posts"></ul>
             <ul class="posts__title">Violin Post</ul>
@@ -51,21 +29,9 @@
               </div>    
             <%= paginate(@tweets) %> 
         </ul>
-        <ul class="pianoright">
-          <a class="btn" href="/tweets">投稿一覧へ戻る</a>
-          <p class="pianoright__post">
-            <%= link_to '投稿', new_tweet_path %>
-          </p>
-        </ul>
+        <%= render partial: "selectright" %>
       </div>
-      <footer class="pianofooter">
-        <div class="pianofooter__twitter">   
-          サイト開発者のツイッターはこちら→  
-          <%= link_to("https://twitter.com/shimo_engineers") do %>
-           <i class="fab fa-twitter"></i>            
-           <% end %>
-        </div>  
-      </footer>
+      <%= render partial: "footer" %>
   </body>
 </html>
 
