@@ -1,29 +1,27 @@
-<header class="header">
-  <div class="titles">
-  <h1 class="titles__title">My precious instrument</h1>
-  </div>
-</header>
+<%= render partial: "header" %>
 <div class="middle">
   <div class="center">
     <link rel="stylesheet" href="./tweets.scss">
-    <div class="container">
+    <div class="newcenter">
       <%= form_with(model: @tweet, local: true) do |form| %>
-        <h3>
-          投稿する
-        </h3>
-        <%= form.text_field :name, placeholder: "title" %>
-        <%# <%= form.text_field :image, placeholder: "Image Url" %> 
-        <%= form.select :instrument_ids, [ ["ピアノ",1], ["ギター", 2], ["ベース", 3 ] ,["バイオリン", 4] ,["その他", 5]], prompt: "楽器を選択してください" %>
-        <%= form.file_field :video, placeholder: "Video Url" %>
-        <%= form.text_area :text, placeholder: "comment" ,cols:"30", rows: "10" , class:"comment" %>
-        <%= form.submit "SEND"%>
+        <div class="newcenter__top"><p>〜新規投稿〜</p></div>
+        <p>タイトル</p>
+        <div class="newcenter__title"><%= form.text_field :name, placeholder: "タイトルを入力してください", class: "newcenter__title--size" %></div> 
+        <p>楽器選択</p>
+        <div class="newcenter__select"><%= form.select :instrument_id, [ ["ピアノ",1], ["ギター", 2], ["ベース", 3 ] ,["バイオリン", 4] ,["その他", 5]], prompt: "---", class: "newcenter__select--btn" %></div> 
+        <p>動画選択</p>
+        <div class="newcenter__file"><%= form.file_field :video, placeholder: "Video Url",class:"newcenter__file--btn" %></div> 
+        <p>動画説明</p>
+        <div class="newcenter__text"><%= form.text_area :text, placeholder: "説明文を入力してください" ,cols:"30", rows: "10" , class:"newcenter__text--comment" %></div> 
+        <div class="newcenter__submit"><%= form.submit "投稿する", class:"newcenter__submit--btn"%></div> 
+        <%= link_to "戻る", root_path, class: "back" %>
       <% end %>
     </div>
   </div>
 </div>
 <footer class="footer">
   <div class="footer__twitter">   
-    サイト開発者のツイッターはこちら→  
+    
     <%= link_to("https://twitter.com/shimo_engineers") do %>
       <i class="fab fa-twitter"></i>            
       <% end %>

@@ -19,29 +19,29 @@ class TweetsController < ApplicationController
   end
 
   def piano
-    @tweets = Tweet.where(instrument_ids: '1').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '1').order("created_at DESC").page(params[:page]).per(5)
   end
 
   def guitar
-    @tweets = Tweet.where(instrument_ids: '2').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '2').order("created_at DESC").page(params[:page]).per(5)
   end
 
   def bass
-    @tweets = Tweet.where(instrument_ids: '3').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '3').order("created_at DESC").page(params[:page]).per(5)
   end
 
   def violin
-    @tweets = Tweet.where(instrument_ids: '4').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '4').order("created_at DESC").page(params[:page]).per(5)
   end
 
   def others
-    @tweets = Tweet.where(instrument_ids: '5').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '5').order("created_at DESC").page(params[:page]).per(5)
   end
 
 
     private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text, :video, :instrument_ids).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:name, :text, :video, :instrument_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

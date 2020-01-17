@@ -13,17 +13,16 @@
             <ul class="posts__title">Piano Post</ul>
               <div class="contents">              
                   <% @tweets.each do |tweet| %>
+                <div class="contentss">
                   <span class="contents__name">
                   <%= tweet.name %>
-                  <%= tweet.instrument_ids %>
                     <div class="post">
                       <div class="post__image">
-                      <%# <div class="post__image" style="background-image: url(<%= tweet.image %>
                       <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
-                      </div>
-                      <div class="post__text"><%= simple_format(tweet.text) %></div>  
+                      </div> 
                     </div>                                                     
                   </span>
+                </div>
                   <% end %>
                  
               </div>    
