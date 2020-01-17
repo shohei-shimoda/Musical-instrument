@@ -1,0 +1,60 @@
+.newcenter {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  &__top {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    &--size {
+      height: 40px;
+      width: 400px;
+    }
+  }
+  &__select {
+    margin-bottom: 20px;
+    &--btn {
+      height: 40px;
+      width: 400px;
+    }
+  }
+  &__file {
+    margin-bottom: 20px;
+    &--btn {
+    
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+    &--comment {
+      height: 200px;
+      width: 400px;
+    }
+  }
+  &__submit {
+    &--btn {
+      background: gray;
+      color: #fff;
+      width: 200px;
+      height: 40px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
+
+.back {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+select {
+  height: 40px;
+  width: 400px;
+}

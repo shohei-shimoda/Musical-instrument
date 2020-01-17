@@ -2,7 +2,7 @@
 ・name
 ・body
 .video
-.instrument_ids
+.instrument_id
 
 # usersテーブル
 .email

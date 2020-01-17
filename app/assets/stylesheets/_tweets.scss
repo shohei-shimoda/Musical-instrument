@@ -101,20 +101,24 @@
   
   &__name {
     font-size: 25px;
+    padding-left: 20%;
   }
 }
 .post {
-  display: flex;
-  margin-bottom: 30px;
+  // display: flex;
+
+  margin: 0 auto;
+  text-align: center;
   &__image {
-    height: 400px;
-    width: 60%;
-    background-size: cover;
+    margin: 0 auto;
+    // height: 400px;
+    // width: 60%;
+    // background-size: cover;
   }
   &__text {
-    border: double 4px rgba(15, 3, 14, 0.6);
-    width: 50%;
-    height: 309.38px;
+    // border: double 4px rgba(15, 3, 14, 0.6);
+    // width: 50%;
+    // height: 309.38px;
   }
 }
 .pagination {
@@ -186,4 +190,8 @@
 .underlinenone {
   text-decoration: none;
   color: rgb(230, 20, 20); 
+}
+
+.contentss {
+  margin-bottom: 50px;
 }
