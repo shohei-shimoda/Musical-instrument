@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: Musical-instrument_production
-  username: Musical-instrument
-  password: <%= ENV['MUSICAL-INSTRUMENT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
