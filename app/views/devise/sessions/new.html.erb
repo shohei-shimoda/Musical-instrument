@@ -1,16 +1,24 @@
-<div class="contents row">
+<%= render partial: "tweets/header" %>
+
+<div class="middle">
+  <div class="center">
+    <link rel="stylesheet" href="./tweets.scss">
+    <div class="newcenter">
+
+
+<div class="newcontents">
   <div class="container">
-    <h2>Log in</h2>
+    <div class="newtitle"><h2>〜ログイン〜</h2></div>
 
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, autofocus: true, class: "newcontents--text" %>
       </div>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "off", class: "newcontents--text" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -21,8 +29,13 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in", class: "newcontents--submit" %>
       </div>
     <% end %>
   </div>
 </div>
+
+    </div>
+  </div>
+</div>
+<%= render partial: "tweets/footer" %>

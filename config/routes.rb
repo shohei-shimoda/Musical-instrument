@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get 'violin'
       get 'others'
     end
+    resources :comments, only: :create
   end
   # resources :instruments, only: [:index, :new, :create, :show]
  

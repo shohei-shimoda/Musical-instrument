@@ -13,18 +13,19 @@
         <%= render partial: "mainleft" %>
         <ul class="center">
           <ul class="posts"></ul>
-            <ul class="posts__title">New Post</ul>
+            <ul class="posts__title">List of posts</ul>
               <div class="contents">              
                   <% @tweets.each do |tweet| %>
                 <div class="contentss">
-                  <span class="contents__name">
-                  <%= tweet.name %>
-                  <%# <%= tweet.instrument_ids %>
+                  <span class="contents__name">    
                     <div class="post">
                       <div class="post__image">
-                      <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+                      <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 200, height: 200, id: "mv" %>
+                      <li class="indexname"><%= tweet.name %></li>
+                      <li class="indexbtn">
+                        <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get, class: "indexbtnn" %>
+                      </li>
                       </div>
-                      <%# <div class="post__text"><%= simple_format(tweet.text) %>
                     </div>                                                     
                   </span>
                 </div>

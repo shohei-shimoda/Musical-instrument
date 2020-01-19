@@ -1,33 +1,45 @@
-<div class="contents row">
-  <h2>Sign up</h2>
-  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-    <%= devise_error_messages! %>
+<%= render partial: "tweets/header" %>
 
-    <div class="field">
-      <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-      <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
-    </div>
+<div class="middle">
+  <div class="center">
+    <link rel="stylesheet" href="./tweets.scss">
+    <div class="newcenter">
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email %>
-    </div>
+      <div class="newcontents">
+        <div class="newtitle"><h2>〜新規登録〜</h2></div>
+        <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :password %>
-      <% if @validatable %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+          <div class="field">
+            <%= f.label :nickname %> <em>(6文字まで)</em><br />
+            <%= f.text_field :nickname, autofocus: true, maxlength: "6", class: "newcontents--text" %>
+          </div>
 
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, class: "newcontents--text" %>
+          </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up" %>
+          <div class="field">
+            <%= f.label :password %>
+            <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "newcontents--text" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "newcontents--text" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "登録", class: "newcontents--submit" %>
+          </div>
+        <% end %>
+      </div>
+
     </div>
-  <% end %>
+  </div>
 </div>
+<%= render partial: "tweets/footer" %>

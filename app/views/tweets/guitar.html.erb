@@ -8,17 +8,20 @@
       <%= render partial: "header" %>
       <div class="middle">
         <%= render partial: "selectleft" %>
-        <ul class="guitarcenter">
+        <ul class="violincenter">
           <ul class="posts"></ul>
             <ul class="posts__title">Guitar Post</ul>
               <div class="contents">              
                   <% @tweets.each do |tweet| %>
                 <div class="contentss">
-                  <span class="contents__name">
-                  <%= tweet.name %>
+                  <span class="contents__name">    
                     <div class="post">
                       <div class="post__image">
-                      <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+                      <%= video_tag tweet.video_url.to_s,loop: true, controls: true, width: 277, height: 250, id: "mv" %>
+                      <li class="indexname"><%= tweet.name %></li>
+                      <li class="indexbtn">
+                        <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get, class: "indexbtnn" %>
+                      </li>
                       </div>
                     </div>                                                     
                   </span>

@@ -1,0 +1,39 @@
+<%= render partial: "header" %>
+
+<div class="middle">
+  <div class="center"> 
+    <div class="mainline">  
+      <p class="usernickname">ユーザー名：<%= @tweet.user.nickname %></p>
+      <p class="tweetname">題名：<%= @tweet.name %></p>    
+      <p class="tweetvideo"><%= video_tag @tweet.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %></p>
+      <ul class="tweetbox">
+        <p>〜詳細〜</p>
+        <p class="tweetbox__text"><%= simple_format(@tweet.text) %></p>    
+      </ul>
+      <div class="container">
+        <% if current_user %>
+          <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+            <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "commentbox" %>
+            <p class="commentbtn"><%= form.submit "コメント投稿", class: "commentbtn--btn" %></p>
+          <% end %>
+        <% else %>
+          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <% end %>
+
+        <div class="comments">
+          <h4>＜コメント一覧＞</h4>
+          <% if @comments %>
+            <% @comments.each do |comment| %>
+              <p class="commentmain">
+                <strong><%= link_to comment.user.nickname, "#", class: "commentname" %></strong>
+                <p class="commentline"><%= comment.text %></p>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<%= render partial: "footer" %>

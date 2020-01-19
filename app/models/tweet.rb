@@ -4,4 +4,5 @@ class Tweet < ApplicationRecord
   # belongs_to :instrument
   # has_many :instrument
   belongs_to :user
+  has_many :comments 
 end

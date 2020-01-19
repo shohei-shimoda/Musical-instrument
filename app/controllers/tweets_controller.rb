@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :piano, :guitar, :bass, :violin, :others]
 
   def index
-    @tweets = Tweet.all.order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.all.order("created_at DESC").page(params[:page]).per(12)
   end
 
   def new
@@ -16,26 +16,29 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @tweet = Tweet.find(params[:id])
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   def piano
-    @tweets = Tweet.where(instrument_id: '1').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '1').order("created_at DESC").page(params[:page]).per(9)
   end
 
   def guitar
-    @tweets = Tweet.where(instrument_id: '2').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '2').order("created_at DESC").page(params[:page]).per(9)
   end
 
   def bass
-    @tweets = Tweet.where(instrument_id: '3').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '3').order("created_at DESC").page(params[:page]).per(9)
   end
 
   def violin
-    @tweets = Tweet.where(instrument_id: '4').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '4').order("created_at DESC").page(params[:page]).per(9)
   end
 
   def others
-    @tweets = Tweet.where(instrument_id: '5').order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.where(instrument_id: '5').order("created_at DESC").page(params[:page]).per(9)
   end
 
 
